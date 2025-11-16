@@ -1,0 +1,61 @@
+
+---
+const TECH_GROUPS = [
+    {
+        type: "Languajes",
+        icon: "✨",
+        description: "The languajes I use daily.",
+        list: ["Python", "Java", "JavaScript", "TypeScript", "CSS", "SQL"]
+    },
+    {
+        type: "Frameworks & Libraries",
+        icon: "🛠️",
+        description: "Tools that accelerate and structure application development.",
+        list: ["React", "Next.js", "Angular", "Astro", "Spring boot"]
+    },
+    {
+        type: "Databases",
+        icon: "💾",
+        description: "Efficient management of structured and unstructured data.",
+        list: ["PostgreSQL", "MySQL", "SupaBase", "Firebase"]
+    },
+    {
+        type: "DevOps & Cloud",
+        icon: "☁️",
+        description: "Practices and platforms for deploying, managing, and scaling applications.",
+        list: ["Git & GitHub", "Docker", "Vercel", "Netlify"]
+    },
+];
+---
+
+<section id="tecnologias" class="py-20 px-8 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-16">
+            Technologies
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {TECH_GROUPS.map((group) => (
+                <div class="flex flex-col bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-xl transition duration-500 hover:border-blue-400 hover:shadow-blue-500/30">
+                    
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">{group.icon}</span>
+                        <h3 class="text-xl font-bold text-white">
+                            {group.type}
+                        </h3>
+                    </div>
+                    
+                    <p class="text-sm text-gray-400 mb-5 flex-grow">{group.description}</p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        {group.list.map((tech) => (
+                            <span class="px-3 py-1 text-xs font-semibold bg-gray-700 text-green-400 rounded-lg transition duration-200 hover:bg-blue-600 hover:text-white cursor-default transform hover:scale-105">
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

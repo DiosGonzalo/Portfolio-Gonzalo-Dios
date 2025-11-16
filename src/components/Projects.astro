@@ -1,0 +1,51 @@
+---
+import Card from './card.astro';
+
+// Datos de ejemplo para tus proyectos
+const PROJECTS = [
+    {
+        title: "Easy summits",
+        description: "Web app to manage mountain climbing activities, manage clients and bookings as well as set different routes and summits, depending on the difficulty level.",
+        tags: ["Spring Boot", "Java", "Thymeleaf", "PostgreSQL"],
+        link: "https://github.com/DiosGonzalo/Easy-Summits",
+        
+    },
+    {
+        title: "Barber Shop Management System",
+        description: "App for a local barber, it manages appointments, clients, products, services and employees. It includes a calendar view and push notifications, Available on Android and iOS.",
+        tags: ["TypeScript", "React Native", "Firebase"],
+        link: "https://apps.apple.com/es/app/miguel-delgado/id6752268535",
+
+    },
+    {
+        title: "F1 Team mechanic (On development)",
+        description: "App to manage the team cars, it componets and repairs, it can also run races to test the car performance.",
+        tags: ["Spring boot", "Java", "Sql", "Thymeleaf"],
+        link: "https://github.com/DiosGonzalo/EscuderiaF1",
+
+    },
+ 
+];
+---
+
+<section id="proyectos" class="py-20 px-8 bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+        <br><br><br>
+        <h2 class="text-4xl font-bold text-center text-white mb-12">
+            Proyectos Destacados
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PROJECTS.map((project) => (
+                <Card 
+                    title={project.title} 
+                    description={project.description} 
+                    tags={project.tags} 
+                    link={project.link} 
+                    
+                />
+            ))}
+        </div>
+        <br><br><br>
+    </div>
+</section>

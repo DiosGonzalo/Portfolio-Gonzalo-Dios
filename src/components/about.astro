@@ -1,0 +1,50 @@
+---
+// Datos de la sección
+const myBio = "I am a full-stack developer with a strong preference for back-end engineering. I have solid experience designing and building scalable, high-performance applications, and I’m currently expanding my skill set into Machine Learning and AI integration. In addition to my back-end focus, I’m also proficient with a wide range of modern frameworks, tools, and technologies across the full development stack. My goal is to create efficient, maintainable, and future-ready solutions that combine robust architecture with intelligent, data-driven capabilities.";
+
+// IMPORTANTE: Si la imagen está en public/, usa la ruta absoluta: /nombre-archivo.jpg
+const profileImage = "/fotoPerfil.jpg"; 
+
+// Datos de perfil
+const role = "Back-end Engineer & AI Enthusiast";
+const quote = "My goal is always to deliver clean and maintainable code that solves real problems.";
+---
+
+<section id="sobre-mi" class="py-20 px-8 bg-gray-800">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-white mb-12">
+            Sobre Mí
+        </h2>
+
+        <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 transition duration-500 
+                    hover:shadow-blue-500/50 hover:border-blue-500">
+            
+            <div class="flex flex-col items-center text-center">
+                
+                <div class="relative mb-6">
+                    <img 
+                        src={profileImage} 
+                        alt="Tu foto de perfil como desarrollador" 
+                        class="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-yellow-400 transform transition duration-500 hover:scale-[1.05]"
+                    />
+                </div>
+                
+                <h3 class="text-3xl font-extrabold text-yellow-400 mb-2">
+                    {role}
+                </h3>
+                
+                <div class="max-w-3xl">
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        {myBio}
+                    </p>
+                </div>
+                
+                <p class="text-xl text-blue-400 italic font-semibold border-t border-gray-700 pt-4 mt-4">
+                    "{quote}"
+                </p>
+                
+            </div>
+        </div>
+        
+        </div>
+</section>
